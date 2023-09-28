@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+:root{
+    --bordercolor:rgb(179, 9, 46);
+    --buttoncolor:rgba(6, 89, 11,0.9);
+}
+    
+    /* --------- HEADER START ----------- */
+
+nav .logo{
+    width: 180px;
+}
+nav .navLink{
+    transition: all .5s;
+    position: relative;
+}
+
+nav .navLink::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: var(--bordercolor);
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: transform 0.3s ease-in-out; 
+    transform: scaleX(0);   
+
+}
+
+nav .navLink:hover::after {
+    transform: scaleX(1);   
+}
+
+nav .accountButton{
+    background-color: var(--buttoncolor);
+    transition: all .5s ;
+}
+
+nav .accountButton:hover{
+    background-color: var(--bordercolor);
+    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 1.326);
+    transform: scale(1.05);   
+}
+.shipping{
+    color: rgb(5, 253, 1) ;
+}
+
+/* --------- HEADER END ----------- */
+
+/* --------- MAİN PAGE START ----------- */
+
+.mainPage .mainButton{
+    background-color: var(--buttoncolor);
+    transition: all .5s ;
+    animation: button 2s linear infinite;
+}
+
+@keyframes button {
+    0%{
+        transform: translate(2px,-2px) rotate(2deg);
+    }
+    25%{
+        transform: translate(2px,2px) rotate(-2deg);   
+    }
+    50%{
+        transform: translate(-4px,2px) rotate(2deg);   
+    }
+    75%{
+        transform: translate(-4px,-2px) rotate(-2deg);   
+    }
+    100%{
+        transform: translate(2px,-2px) rotate(2deg);
+    }
+}
+
+.mainPage .mainButton:hover{
+    background-color: var(--bordercolor);
+    box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 1.326);
+    transform: scale(1.05);   
+}
+
+
+
+/* --------- MAİN PAGE END ----------- */
+
+
+/* ------FOOTER START --------- */
+
+footer .logo{
+    max-width: 180px;
+    width: 100%;
+}
+footer .navLink{
+    transition: all .5s;
+    position: relative;
+}
+footer .navLink::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: var(--bordercolor);
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: transform 0.3s ease-in-out; 
+    transform: scaleX(0);   
+
+}
+
+footer .navLink:hover::after {
+    transform: scaleX(1);   
+}
+
+/* ------FOOTER START --------- */
